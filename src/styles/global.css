@@ -1,0 +1,10 @@
+@import "tailwindcss";
+
+@theme {
+  --color-White: #fff;
+  --color-LightBlue: #0597df;
+  --color-Blue: #007ab7;
+
+  --font-Poppins: "Poppins";
+  --font-Montserrat: "Montserrat";
+}

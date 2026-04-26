@@ -1,11 +1,145 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
+import Botton from "../components/Botton.astro";
+import Services from "../components/Services.astro";
+import GeneralContainer from "../components/GeneralContainer.astro";
+import Opinion from "../components/Opinion.astro";
 ---
 
 <Layout>
-	<Welcome />
+  <header
+    style="background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.jpg);"
+    class="h-[80dvh] w-full bg-cover bg-no-repeat flex items-center backdrop-contrast-75 mt-24"
+  >
+    <div class="mx-4">
+      <h1 class="text-White text-5xl text-pretty w-1/2">
+        EXPERTOS EN REPARACIÓN Y MANTENIMIENTO DE <span
+          class="text-Blue font-bold">COMPUTADORAS</span
+        >
+      </h1>
+      <p class="text-White mb-4">
+        Tu PC como nueva con nuestro servicio técnico profesional en Costa Rica
+      </p>
+      <Botton icon="fa-phone" texto="Contactenos" tipo="fa-solid" />
+    </div>
+  </header>
+
+  <section id="Servicios" class="mx-4 mt-12">
+    <h2 class="uppercase font-bold text-center my-4 text-lg">
+      Nuestros servicios
+    </h2>
+
+    <div class="grid grid-cols-3 gap-6">
+      <Services
+        titulo="Diagnóstico Profesional"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
+        precio="5000"
+      />
+
+      <Services
+        titulo="Solución Rápida"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
+        precio="5000"
+      />
+
+      <Services
+        titulo="Solución Avanzada"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
+        precio="5000"
+      />
+    </div>
+  </section>
+
+  <section id="Nosotros" class="mx-4 my-12">
+    <h3 class="uppercase font-bold text-center my-4 text-lg">
+      ¿Por qué elegir a <span class="font-bold text-Blue">Aurex Lab</span> ?
+    </h3>
+
+    <div class="grid grid-cols-3 gap-6">
+      <GeneralContainer
+        titulo="Profesionalismo"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        ><img
+          class="w-1/4"
+          src="/IMGS/Icons/Profesionalismo.svg"
+          alt="Icono de profesionalismo"
+        /></GeneralContainer
+      >
+
+      <GeneralContainer
+        titulo="Garantía"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        ><img
+          class="w-1/4"
+          src="/IMGS/Icons/Wallet.svg"
+          alt="Icono de Garantía"
+        /></GeneralContainer
+      >
+
+      <GeneralContainer
+        titulo="Servicio a domicilio"
+        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        ><img
+          class="w-1/4"
+          src="/IMGS/Icons/SAD.svg"
+          alt="icono de Servicio a domicilio"
+        /></GeneralContainer
+      >
+    </div>
+  </section>
+
+  <section class="my-12 mx-4">
+     <h3 class="uppercase font-bold text-center my-4 text-lg">
+      ¿Como trabajamos?
+    </h3>
+
+    <div class="grid grid-cols-3 gap-6">
+
+      <GeneralContainer titulo="Diagnóstico Asequible" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+
+      <GeneralContainer titulo="Cotización clara" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+
+      <GeneralContainer titulo="Reparación profesional" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+
+      <GeneralContainer titulo="Entrega rápida" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+    </div>
+  </section>
+
+  <section class="mx-4 my-12">
+    <h5 class="uppercase font-bold text-center my-4 text-lg">
+      Opinion de nuestros clientes
+    </h5>
+
+    <div class="grid grid-cols-3 gap-6">
+      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+        <div class="flex gap-1 text-yellow-500">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </Opinion>
+
+      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+        <div class="flex gap-1 text-yellow-500">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </Opinion>
+
+      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+        <div class="flex gap-1 text-yellow-500">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+        </div>
+      </Opinion>
+    </div>
+  </section>
 </Layout>
