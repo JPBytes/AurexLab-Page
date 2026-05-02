@@ -1,0 +1,185 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+const articulos = [
+  {
+    imagen: "/IMGS/Blog/LimpiezaInterna.jpg",
+    titulo: "Guía de Limpieza Interna: PC y Laptops",
+    subtitulo: "Mantenimiento preventivo para evitar el thermal throttling",
+    descripcion:
+      "Aprende a remover el polvo y aplicar aire comprimido correctamente para extender la vida útil de tus componentes sin dañarlos.",
+    categoria: "Mantenimiento",
+    fechaPublicacion: "2026-04-15",
+    tiempoLectura: "5 min",
+  },
+  {
+    imagen: "/IMGS/Blog/RealidadAumentada.jpg",
+    titulo: "El Auge de las Gafas de Realidad Aumentada",
+    subtitulo: "Novedades en el ecosistema de wearables para 2026",
+    descripcion:
+      "Analizamos los nuevos lanzamientos que integran IA generativa directamente en tu campo de visión de forma ligera y ergonómica.",
+    categoria: "Novedades",
+    fechaPublicacion: "2026-05-01",
+    tiempoLectura: "8 min",
+  },
+  {
+    imagen: "/IMGS/Blog/CambiarPantallaSmarthphone.webp",
+    titulo: "Cómo Sustituir la Pantalla de tu Smartphone",
+    subtitulo: "Reparación paso a paso de paneles OLED",
+    descripcion:
+      "Herramientas necesarias y precauciones con los cables flex para cambiar una pantalla rota de forma casera y segura.",
+    categoria: "Reparacion",
+    fechaPublicacion: "2026-03-20",
+    tiempoLectura: "12 min",
+  },
+  {
+    imagen: "/IMGS/Blog/IdentidadDigital.jpeg",
+    titulo: "Protege tu Identidad Digital: Guía 2026",
+    subtitulo: "Consejos esenciales de ciberseguridad personal",
+    descripcion:
+      "La transición de las contraseñas a los 'passkeys' y cómo configurar la autenticación multifactor en todos tus servicios.",
+    categoria: "Consejos",
+    fechaPublicacion: "2026-04-28",
+    tiempoLectura: "6 min",
+  },
+  {
+    imagen: "/IMGS/Blog/ComputacionCuantica.jpg",
+    titulo: "Computación Cuántica en la Nube",
+    subtitulo: "Tecnología de vanguardia al alcance de desarrolladores",
+    descripcion:
+      "Cómo las grandes empresas están permitiendo que programadores ejecuten algoritmos en hardware cuántico real vía remota.",
+    categoria: "Tecnologia",
+    fechaPublicacion: "2026-04-10",
+    tiempoLectura: "10 min",
+  },
+  {
+    imagen: "/IMGS/Blog/LaptopVieja.jpg",
+    titulo: "Tu Laptop Vieja Puede Ser Rápida de Nuevo",
+    subtitulo: "Reparación y mejora: Actualización a NVMe Gen 5",
+    descripcion:
+      "Sustituir un disco mecánico o un SSD antiguo puede transformar la velocidad de carga de tu sistema operativo radicalmente.",
+    categoria: "Reparacion",
+    fechaPublicacion: "2026-02-12",
+    tiempoLectura: "7 min",
+  },
+  {
+    imagen: "/IMGS/Blog/EticaIA.png",
+    titulo: "Ética en la Inteligencia Artificial",
+    subtitulo: "Novedades en regulaciones internacionales",
+    descripcion:
+      "Un vistazo a las nuevas leyes que exigen transparencia en los modelos de entrenamiento para proteger los derechos de autor.",
+    categoria: "Novedades",
+    fechaPublicacion: "2026-05-02",
+    tiempoLectura: "9 min",
+  },
+  {
+    imagen: "/IMGS/Blog/OptimizacionLinux.png",
+    titulo: "Optimización de Servidores Linux",
+    subtitulo: "Mantenimiento de sistemas para alta disponibilidad",
+    descripcion:
+      "Comandos básicos de diagnóstico y scripts de limpieza de logs para mantener tu servidor ligero y funcional.",
+    categoria: "Mantenimiento",
+    fechaPublicacion: "2026-03-05",
+    tiempoLectura: "15 min",
+  },
+  {
+    imagen: "/IMGS/Blog/BateriaLitio.jpg",
+    titulo: "Alarga la Vida de tu Batería de Litio",
+    subtitulo: "Consejos prácticos sobre ciclos de carga",
+    descripcion:
+      "Mitos y realidades sobre la carga rápida y por qué nunca deberías dejar que tu dispositivo baje del 20% de energía.",
+    categoria: "Consejos",
+    fechaPublicacion: "2026-04-22",
+    tiempoLectura: "4 min",
+  },
+  {
+    imagen: "/IMGS/Blog/InternetSatelital.webp",
+    titulo: "Internet Satelital de Baja Latencia",
+    subtitulo: "Tecnología de conectividad global",
+    descripcion:
+      "La nueva generación de satélites permite jugar online y hacer videollamadas desde las zonas más remotas del planeta.",
+    categoria: "Tecnologia",
+    fechaPublicacion: "2026-01-30",
+    tiempoLectura: "6 min",
+  },
+];
+---
+
+<Layout>
+  <section class="grid grid-cols-2 mt-24 items-center justify-center">
+    <div class="flex flex-col gap-2 mx-4">
+      <h1 class="text-Blue uppercase font-bold text-3xl">
+        Articulos y noticias
+      </h1>
+      <p class="uppercase text-7xl">BLOG</p>
+      <p>
+        Consejos, guías y noticias sobre tecnología, <br /> mantenimiento y reparacion
+        de equipos.
+      </p>
+    </div>
+
+    <div class="h-72 overflow-hidden">
+      <img
+        src="/IMGS/Stock/Laptop.jpg"
+        alt="Imagen de persona reparando una laptop"
+        class="bg-no-repeat bg-cover"
+      />
+    </div>
+  </section>
+
+  <section class="my-12 mx-4">
+    <ul class="flex gap-6">
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Todos
+      </li>
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Mantenimiento
+      </li>
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Reparación
+      </li>
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Consejos
+      </li>
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Tecnología
+      </li>
+      <li
+        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
+      >
+        Novedades
+      </li>
+    </ul>
+
+    <section class="grid grid-cols-3 gap-6 mt-12">
+      {
+        articulos.map((articulo) => (
+          <article class="rounded-lg overflow-hidden bg-ContainerBG/90 text-White" data-aos="fade-left">
+            <img class="h-64 w-full object-cover" src={articulo.imagen} alt={articulo.titulo} />
+            <div class="p-4 flex flex-col gap-1">
+                <p class="text-Blue">{articulo.titulo}</p>
+            <p>{articulo.subtitulo}</p>
+            <p class="text-gray-400">{articulo.descripcion}</p>
+            </div>
+
+            <div class="flex gap-4 p-4 text-gray-400">
+                <span class="after:content-['◉'] flex gap-4">{articulo.categoria}</span>
+                <span class="after:content-['◉'] flex gap-4">{articulo.fechaPublicacion}</span>
+                <span>{articulo.tiempoLectura}</span>
+            </div>
+          </article>
+        ))
+      }
+    </section>
+  </section>
+</Layout>

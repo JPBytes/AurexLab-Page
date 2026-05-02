@@ -3,8 +3,9 @@
 @theme {
   --color-White: #fff;
   --color-LightBlue: #0597df;
-  --color-ContainerBG: #0F172A;
+  --color-ContainerBG: #0f172a;
   --color-Blue: #007ab7;
+  --color-Black: #000;
 
   --font-Poppins: "Poppins";
   --font-Montserrat: "Montserrat";
