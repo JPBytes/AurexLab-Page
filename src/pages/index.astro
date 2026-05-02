@@ -4,6 +4,7 @@ import Botton from "../components/Botton.astro";
 import Services from "../components/Services.astro";
 import GeneralContainer from "../components/GeneralContainer.astro";
 import Opinion from "../components/Opinion.astro";
+import HerosBTN from "../components/HerosBTN.astro";
 ---
 
 <Layout>
@@ -11,46 +12,76 @@ import Opinion from "../components/Opinion.astro";
     style="background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.jpg);"
     class="h-[80dvh] w-full bg-cover bg-no-repeat flex items-center backdrop-contrast-75 mt-24"
   >
-    <div class="mx-4">
-      <h1 class="text-White text-5xl text-pretty w-1/2">
-        EXPERTOS EN REPARACIÓN Y MANTENIMIENTO DE <span
-          class="text-Blue font-bold">COMPUTADORAS</span
-        >
+    <div class="mx-4 flex flex-col gap-6">
+      <h1 class="uppercase text-7xl flex-col flex text-White">
+        <span class="text-Blue text-2xl font-bold">Bienvenid@ a</span> Nuestro taller
       </h1>
-      <p class="text-White mb-4">
-        Tu PC como nueva con nuestro servicio técnico profesional en Costa Rica
+      <p class="text-White text-2xl">
+        En AurexLab cuidamos y reparamos tus equipos como si fueran nuestros.
       </p>
+      <div class="flex gap-4">
+        <HerosBTN
+          clases="fa-solid fa-user"
+          descripcion="Técnicos especializados"
+        />
+        <HerosBTN
+          clases="fa-solid fa-toolbox"
+          descripcion="Herramientas profesionales"
+        />
+        <HerosBTN
+          clases="fa-solid fa-clock"
+          descripcion="Diagnóstico preciso"
+        />
+        <HerosBTN
+          clases="fa-solid fa-certificate"
+          descripcion="Garantía en todos nuestros servicios"
+        />
+      </div>
       <Botton icon="fa-phone" texto="Contactenos" tipo="fa-solid" />
     </div>
   </header>
 
-  <section id="Servicios" class="mx-4 mt-12">
+  <section id="Servicios" class="mx-4 mt-12" data-aos="fade-down">
     <h2 class="uppercase font-bold text-center my-4 text-lg">
       Nuestros servicios
     </h2>
 
     <div class="grid grid-cols-3 gap-6">
-      <Services
-        titulo="Diagnóstico Profesional"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
-        precio="5000"
-      />
+      <Services titulo="Diagnóstico Profesional" precio="5000">
+        <ol>
+          <li class="before:content-['✓'] flex gap-2">
+            Revisión de hardware y software
+          </li>
+          <li class="before:content-['✓'] flex gap-2">Detección de fallas</li>
+          <li class="before:content-['✓'] flex gap-2">
+            Recomendación de solución
+          </li>
+        </ol></Services
+      >
 
-      <Services
-        titulo="Solución Rápida"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
-        precio="5000"
-      />
+      <Services titulo="Solución Rápida" precio="15000">
+        <ol>
+          <li class="before:content-['✓'] flex gap-2">Limpieza básica</li>
+          <li class="before:content-['✓'] flex gap-2">
+            Optimización del sistema
+          </li>
+          <li class="before:content-['✓'] flex gap-2">Eliminación de virus</li>
+        </ol></Services
+      >
 
-      <Services
-        titulo="Solución Avanzada"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis quis ipsa minima delectus est voluptates ducimus doloremque quibusdam eligendi odit"
-        precio="5000"
-      />
+      <Services titulo="Solución Avanzada" precio="23000">
+        <ol>
+          <li class="before:content-['✓'] flex gap-2">Limpieza profunda</li>
+          <li class="before:content-['✓'] flex gap-2">
+            Cambio de pasta térmica
+          </li>
+          <li class="before:content-['✓'] flex gap-2">Formateo del sistema</li>
+        </ol></Services
+      >
     </div>
   </section>
 
-  <section id="Nosotros" class="mx-4 my-12">
+  <section id="Nosotros" class="mx-4 my-12" data-aos="fade-right">
     <h3 class="uppercase font-bold text-center my-4 text-lg">
       ¿Por qué elegir a <span class="font-bold text-Blue">Aurex Lab</span> ?
     </h3>
@@ -58,9 +89,9 @@ import Opinion from "../components/Opinion.astro";
     <div class="grid grid-cols-3 gap-6">
       <GeneralContainer
         titulo="Profesionalismo"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        descripcion="Tratamos cada equipo con cuidado y responsabilidad, aplicando buenas prácticas en cada proceso."
         ><img
-          class="w-1/4"
+          class="w-1/4 my-4"
           src="/IMGS/Icons/Profesionalismo.svg"
           alt="Icono de profesionalismo"
         /></GeneralContainer
@@ -68,19 +99,19 @@ import Opinion from "../components/Opinion.astro";
 
       <GeneralContainer
         titulo="Garantía"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        descripcion="Ofrecemos garantía en nuestros servicios para que tengas tranquilidad después de la reparación."
         ><img
-          class="w-1/4"
+          class="w-1/4 my-4"
           src="/IMGS/Icons/Wallet.svg"
           alt="Icono de Garantía"
         /></GeneralContainer
       >
 
       <GeneralContainer
-        titulo="Servicio a domicilio"
-        descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"
+        titulo="Atención personalizada"
+        descripcion="Te ofrecemos un trato directo contigo, explicaciones claras y sencillas, asesoría adaptada a tu caso específico y seguimiento continuo durante todo el servicio."
         ><img
-          class="w-1/4"
+          class="w-1/4 my-4"
           src="/IMGS/Icons/SAD.svg"
           alt="icono de Servicio a domicilio"
         /></GeneralContainer
@@ -88,30 +119,55 @@ import Opinion from "../components/Opinion.astro";
     </div>
   </section>
 
-  <section class="my-12 mx-4">
-     <h3 class="uppercase font-bold text-center my-4 text-lg">
+  <section class="my-12 mx-4" data-aos="fade-left">
+    <h3 class="uppercase font-bold text-center my-4 text-lg">
       ¿Como trabajamos?
     </h3>
 
     <div class="grid grid-cols-3 gap-6">
+      <GeneralContainer
+        titulo="Diagnóstico Asequible"
+        descripcion="Detectamos el problema de tu equipo de forma rápida y precisa. Nuestro diagnóstico tiene un costo accesible y se descuenta si decides realizar la reparación con nosotros."
+      />
 
-      <GeneralContainer titulo="Diagnóstico Asequible" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+      <GeneralContainer
+        titulo="Cotización clara"
+        descripcion="Te explicamos exactamente qué tiene tu equipo, qué se necesita hacer y cuánto cuesta, sin cargos ocultos ni sorpresas."
+      />
 
-      <GeneralContainer titulo="Cotización clara" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+      <GeneralContainer
+        titulo="Reparación profesional"
+        descripcion="Trabajamos con herramientas adecuadas y procesos seguros para garantizar una reparación confiable y duradera."
+      />
 
-      <GeneralContainer titulo="Reparación profesional" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+      <GeneralContainer
+        titulo="Entrega rápida"
+        descripcion="Sabemos que tu equipo es importante, por eso priorizamos tiempos de entrega rápidos sin comprometer la calidad."
+      />
 
-      <GeneralContainer titulo="Entrega rápida" descripcion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis"/>
+      <GeneralContainer
+        titulo="Seguridad del equipo"
+        descripcion="Cuidamos tu equipo en todo momento trabajando con procedimientos seguros para evitar daños y garantizar un manejo responsable de cada componente."
+      />
+
+      <GeneralContainer
+        titulo="Transparencia total"
+        descripcion="Te mantenemos informado en cada etapa del proceso, sin realizar ningún trabajo sin tu aprobación y siempre conocerás el costo antes de empezar."
+      />
     </div>
   </section>
 
-  <section class="mx-4 my-12">
+  <section class="mx-4 my-12" data-aos="fade-up">
     <h5 class="uppercase font-bold text-center my-4 text-lg">
       Opinion de nuestros clientes
     </h5>
 
     <div class="grid grid-cols-3 gap-6">
-      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+      <Opinion
+        nombre="María Eugenia"
+        opinion="Excelente servicio, dejaron mi laptop como nueva. Muy profesionales y rápidos, totalmente recomendados."
+        src="/IMGS/Opinion/Maria.jpg"
+      >
         <div class="flex gap-1 text-yellow-500">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -121,7 +177,11 @@ import Opinion from "../components/Opinion.astro";
         </div>
       </Opinion>
 
-      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+      <Opinion
+        nombre="Carlos Rodríguez"
+        opinion="Pensé que mi computadora ya no tenía solución, pero lograron repararla sin problemas. Muy buena atención."
+        src="/IMGS/Opinion/Carlos.jpg"
+      >
         <div class="flex gap-1 text-yellow-500">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
@@ -131,7 +191,11 @@ import Opinion from "../components/Opinion.astro";
         </div>
       </Opinion>
 
-      <Opinion nombre="María Eugenia" opinion="Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias voluptatibus, numquam vel non est ipsa ab iusto fugiat debitis" src="/IMGS/Opinion/Mujer.jpg">
+      <Opinion
+        nombre="Andrés Mora"
+        opinion="Buen precio, atención clara y resultados rápidos. Volvería a usar el servicio sin duda."
+        src="/IMGS/Opinion/Andres.jpg"
+      >
         <div class="flex gap-1 text-yellow-500">
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
