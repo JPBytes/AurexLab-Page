@@ -13,11 +13,13 @@
   },
   "dependencies": {
     "@astrojs/react": "^5.0.4",
+    "@supabase/supabase-js": "^2.107.0",
     "@tailwindcss/vite": "^4.2.4",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
     "aos": "^2.3.4",
     "astro": "^6.1.9",
+    "pnpm": "^11.5.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "react-router": "^7.16.0",
