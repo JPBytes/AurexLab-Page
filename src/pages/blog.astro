@@ -3,7 +3,7 @@ import Layout from "../layouts/Layout.astro";
 
 const articulos = [
   {
-    imagen: "/IMGS/Blog/LimpiezaInterna.jpg",
+    imagen: "/IMGS/Blog/LimpiezaInterna.webp",
     titulo: "Guía de Limpieza Interna: PC y Laptops",
     subtitulo: "Mantenimiento preventivo para evitar el thermal throttling",
     descripcion:
@@ -13,7 +13,7 @@ const articulos = [
     tiempoLectura: "5 min",
   },
   {
-    imagen: "/IMGS/Blog/RealidadAumentada.jpg",
+    imagen: "/IMGS/Blog/RealidadAumentada.webp",
     titulo: "El Auge de las Gafas de Realidad Aumentada",
     subtitulo: "Novedades en el ecosistema de wearables para 2026",
     descripcion:
@@ -33,7 +33,7 @@ const articulos = [
     tiempoLectura: "12 min",
   },
   {
-    imagen: "/IMGS/Blog/IdentidadDigital.jpeg",
+    imagen: "/IMGS/Blog/IdentidadDigital.webp",
     titulo: "Protege tu Identidad Digital: Guía 2026",
     subtitulo: "Consejos esenciales de ciberseguridad personal",
     descripcion:
@@ -43,7 +43,7 @@ const articulos = [
     tiempoLectura: "6 min",
   },
   {
-    imagen: "/IMGS/Blog/ComputacionCuantica.jpg",
+    imagen: "/IMGS/Blog/ComputacionCuantica.webp",
     titulo: "Computación Cuántica en la Nube",
     subtitulo: "Tecnología de vanguardia al alcance de desarrolladores",
     descripcion:
@@ -53,7 +53,7 @@ const articulos = [
     tiempoLectura: "10 min",
   },
   {
-    imagen: "/IMGS/Blog/LaptopVieja.jpg",
+    imagen: "/IMGS/Blog/LaptopVieja.webp",
     titulo: "Tu Laptop Vieja Puede Ser Rápida de Nuevo",
     subtitulo: "Reparación y mejora: Actualización a NVMe Gen 5",
     descripcion:
@@ -63,7 +63,7 @@ const articulos = [
     tiempoLectura: "7 min",
   },
   {
-    imagen: "/IMGS/Blog/EticaIA.png",
+    imagen: "/IMGS/Blog/EticaIA.webp",
     titulo: "Ética en la Inteligencia Artificial",
     subtitulo: "Novedades en regulaciones internacionales",
     descripcion:
@@ -73,7 +73,7 @@ const articulos = [
     tiempoLectura: "9 min",
   },
   {
-    imagen: "/IMGS/Blog/OptimizacionLinux.png",
+    imagen: "/IMGS/Blog/OptimizacionLinux.webp",
     titulo: "Optimización de Servidores Linux",
     subtitulo: "Mantenimiento de sistemas para alta disponibilidad",
     descripcion:
@@ -83,7 +83,7 @@ const articulos = [
     tiempoLectura: "15 min",
   },
   {
-    imagen: "/IMGS/Blog/BateriaLitio.jpg",
+    imagen: "/IMGS/Blog/BateriaLitio.webp",
     titulo: "Alarga la Vida de tu Batería de Litio",
     subtitulo: "Consejos prácticos sobre ciclos de carga",
     descripcion:
@@ -106,80 +106,74 @@ const articulos = [
 ---
 
 <Layout>
-  <section class="grid grid-cols-2 mt-24 items-center justify-center">
-    <div class="flex flex-col gap-2 mx-4">
-      <h1 class="text-Blue uppercase font-bold text-3xl">
-        Articulos y noticias
+  <header
+    style="background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.webp);"
+    class="h-[40dvh] w-full bg-cover bg-no-repeat flex items-center backdrop-contrast-75 mt-12"
+    data-aos="fade-up"
+  >
+    <div class="flex flex-col gap-6 w-[80%] m-auto">
+      <h1 class="uppercase text-7xl flex-col flex text-White text-center">
+        <span class="text-Blue text-2xl font-bold">Articulos y noticias</span>
+        BLOG
       </h1>
-      <p class="uppercase text-7xl">BLOG</p>
-      <p>
-        Consejos, guías y noticias sobre tecnología, <br /> mantenimiento y reparacion
-        de equipos.
+      <p class="text-White text-xl text-center">
+        Consejos, guías y noticias sobre tecnología, <br />
+        mantenimiento y reparacion de equipos.
       </p>
     </div>
+  </header>
 
-    <div class="h-72 overflow-hidden">
-      <img
-        src="/IMGS/Stock/Laptop.jpg"
-        alt="Imagen de persona reparando una laptop"
-        class="bg-no-repeat bg-cover"
-      />
-    </div>
-  </section>
-
-  <section class="my-12 mx-4">
-    <ul class="flex gap-6">
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Todos
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Mantenimiento
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Reparación
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Consejos
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Tecnología
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Novedades
-      </li>
-    </ul>
-
-    <section class="grid grid-cols-3 gap-6 mt-12">
-      {
-        articulos.map((articulo) => (
-          <article class="rounded-lg overflow-hidden bg-ContainerBG/90 text-White" data-aos="fade-left">
-            <img class="h-64 w-full object-cover" src={articulo.imagen} alt={articulo.titulo} />
+  <section class="py-12">
+    <div class="w-[80%] m-auto">
+      <p class="mb-2 uppercase text-gray-400 tracking-wider">
+        Filtrar por categoría
+      </p>
+      <ul class="flex gap-6">
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Todos
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Mantenimiento
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Reparación
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Consejos
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Tecnología
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Novedades
+        </li>
+      </ul>
+      <section class="grid grid-cols-3 gap-6 mt-12" data-aos="fade-left">
+        {articulos.map((articulo) => (
+          <article class="rounded-lg overflow-hidden bg-ContainerBG/90 text-White hover:bg-ContainerBG1 hover:cursor-pointer hover:duration-300 hover:scale-90 hover:border-Blue hover:border-2 hover:transition-all">
+            <img
+              class="h-56 w-full object-cover"
+              src={articulo.imagen}
+              alt={articulo.titulo}
+            />
             <div class="p-4 flex flex-col gap-1">
-                <p class="text-Blue">{articulo.titulo}</p>
-            <p>{articulo.subtitulo}</p>
-            <p class="text-gray-400">{articulo.descripcion}</p>
+              <p class="text-Blue">{articulo.titulo}</p>
+              <p>{articulo.subtitulo}</p>
+              <p class="text-gray-400">{articulo.descripcion}</p>
             </div>
 
             <div class="flex gap-4 p-4 text-gray-400">
-                <span class="after:content-['◉'] flex gap-4">{articulo.categoria}</span>
-                <span class="after:content-['◉'] flex gap-4">{articulo.fechaPublicacion}</span>
-                <span>{articulo.tiempoLectura}</span>
+              <span class="after:content-['◉'] flex gap-4">
+                {articulo.categoria}
+              </span>
+              <span class="after:content-['◉'] flex gap-4">
+                {articulo.fechaPublicacion}
+              </span>
+              <span>{articulo.tiempoLectura}</span>
             </div>
           </article>
-        ))
-      }
-    </section>
+        ))}
+      </section>
+    </div>
   </section>
 </Layout>

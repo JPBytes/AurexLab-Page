@@ -9,18 +9,22 @@ import HerosBTN from "../components/HerosBTN.astro";
 
 <Layout>
   <header
-    style="background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.jpg);"
-    class="h-[80dvh] w-full bg-cover bg-no-repeat flex items-center backdrop-contrast-75 mt-24"
+    style="background-image: linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.webp);"
+    class="h-[80dvh] w-full bg-cover bg-no-repeat flex items-center backdrop-contrast-75 mt-12"
     data-aos="fade-up"
   >
-    <div class="mx-4 flex flex-col gap-6">
+    <div class="flex flex-col gap-6 w-[80%] m-auto items-center text-left">
       <h1 class="uppercase text-7xl flex-col flex text-White">
-        <span class="text-Blue text-2xl font-bold">Bienvenid@ a</span> Nuestro taller
+        <span class="text-Blue text-2xl font-bold text-center">
+          Bienvenidos a
+        </span>
+        AUREXLAB
       </h1>
       <p class="text-White text-2xl">
-        En AurexLab cuidamos y reparamos tus equipos como si fueran nuestros.
+        Cuidamos, diagnosticamos y reparamos tus equipos como si fueran
+        nuestros.
       </p>
-      <div class="flex gap-4">
+      <div class="grid grid-cols-2 gap-4">
         <HerosBTN
           clases="fa-solid fa-user"
           descripcion="Técnicos especializados"
@@ -38,173 +42,226 @@ import HerosBTN from "../components/HerosBTN.astro";
           descripcion="Garantía en todos nuestros servicios"
         />
       </div>
-      <Botton icon="fa-phone" texto="Contactenos" tipo="fa-solid" />
+      <Botton icon="fa-phone" texto="Contáctenos" tipo="fa-solid" />
     </div>
   </header>
 
-  <section id="Servicios" class="mx-4 mt-12" data-aos="fade-down">
-    <h2 class="uppercase font-bold text-center my-4 text-lg">
-      Nuestros servicios
-    </h2>
+  <section id="Servicios" class="py-12 bg-ContainerBG" data-aos="fade-down">
+    <div class="w-[80%] m-auto">
+      <div class="text-center mb-12">
+        <p class="text-Blue font-semibold tracking-wider uppercase text-xs sm:text-sm">
+          Planes y tarifas
+        </p>
+        <h2 class="uppercase font-extrabold text-3xl sm:text-4xl tracking-tight">
+          Nuestros servicios
+        </h2>
+        <p class="text-gray-400">
+          Soluciones claras y adaptadas al estado real de tu equipo
+        </p>
+      </div>
 
-    <div class="grid grid-cols-3 gap-6">
-      <Services titulo="Diagnóstico Profesional" precio="5000">
-        <ol>
-          <li class="before:content-['✓'] flex gap-2">
-            Revisión de hardware y software
-          </li>
-          <li class="before:content-['✓'] flex gap-2">Detección de fallas</li>
-          <li class="before:content-['✓'] flex gap-2">
-            Recomendación de solución
-          </li>
-        </ol></Services
-      >
+      <div class="grid grid-cols-3 gap-6">
+        <Services titulo="Diagnóstico Profesional" precio="5000">
+          <ol>
+            <li class="before:content-['✓'] flex gap-2">
+              Revisión de hardware y software
+            </li>
+            <li class="before:content-['✓'] flex gap-2">Detección de fallas</li>
+            <li class="before:content-['✓'] flex gap-2">
+              Recomendación de solución
+            </li>
+          </ol>
+        </Services>
 
-      <Services titulo="Solución Rápida" precio="15000">
-        <ol>
-          <li class="before:content-['✓'] flex gap-2">Limpieza básica</li>
-          <li class="before:content-['✓'] flex gap-2">
-            Optimización del sistema
-          </li>
-          <li class="before:content-['✓'] flex gap-2">Eliminación de virus</li>
-        </ol></Services
-      >
+        <Services titulo="Solución Rápida" precio="15000" destacado={true}>
+          <ol>
+            <li class="before:content-['✓'] flex gap-2">Limpieza básica</li>
+            <li class="before:content-['✓'] flex gap-2">
+              Optimización del sistema
+            </li>
+            <li class="before:content-['✓'] flex gap-2">
+              Eliminación de virus
+            </li>
+          </ol>
+        </Services>
 
-      <Services titulo="Solución Avanzada" precio="23000">
-        <ol>
-          <li class="before:content-['✓'] flex gap-2">Limpieza profunda</li>
-          <li class="before:content-['✓'] flex gap-2">
-            Cambio de pasta térmica
-          </li>
-          <li class="before:content-['✓'] flex gap-2">Formateo del sistema</li>
-        </ol></Services
-      >
+        <Services titulo="Solución Avanzada" precio="23000">
+          <ol>
+            <li class="before:content-['✓'] flex gap-2">Limpieza profunda</li>
+            <li class="before:content-['✓'] flex gap-2">
+              Cambio de pasta térmica
+            </li>
+            <li class="before:content-['✓'] flex gap-2">
+              Formateo del sistema
+            </li>
+          </ol>
+        </Services>
+      </div>
     </div>
   </section>
 
-  <section id="Nosotros" class="mx-4 my-12" data-aos="fade-right">
-    <h3 class="uppercase font-bold text-center my-4 text-lg">
-      ¿Por qué elegir a <span class="font-bold text-Blue">Aurex Lab</span> ?
-    </h3>
-
-    <div class="grid grid-cols-3 gap-6">
-      <GeneralContainer
-        titulo="Profesionalismo"
-        descripcion="Tratamos cada equipo con cuidado y responsabilidad, aplicando buenas prácticas en cada proceso."
-        ><img
-          class="w-1/4 my-4"
-          src="/IMGS/Icons/Profesionalismo.svg"
-          alt="Icono de profesionalismo"
-        /></GeneralContainer
+  <section id="Nosotros" class="py-12 bg-ContainerBG1" data-aos="fade-right">
+    <div class="w-[80%] m-auto">
+      <div
+        class="text-center max-w-2xl mx-auto mb-14"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-once="true"
       >
+        <span class="text-Blue font-semibold tracking-wider uppercase text-xs sm:text-sm">
+          Confianza y respaldo
+        </span>
+        <h2 class="uppercase font-extrabold text-3xl sm:text-4xl tracking-tight">
+          ¿Por qué elegir a <span class="text-Blue">Aurex Lab</span>?
+        </h2>
+      </div>
 
-      <GeneralContainer
-        titulo="Garantía"
-        descripcion="Ofrecemos garantía en nuestros servicios para que tengas tranquilidad después de la reparación."
-        ><img
-          class="w-1/4 my-4"
-          src="/IMGS/Icons/Wallet.svg"
-          alt="Icono de Garantía"
-        /></GeneralContainer
-      >
+      <div class="grid grid-cols-3 gap-6">
+        <GeneralContainer
+          titulo="Profesionalismo"
+          descripcion="Tratamos cada equipo con cuidado y responsabilidad, aplicando buenas prácticas en cada proceso."
+        >
+          <img
+            class="w-1/4 my-4"
+            src="/IMGS/Icons/Profesionalismo.webp"
+            alt="Icono de profesionalismo"
+          />
+        </GeneralContainer>
 
-      <GeneralContainer
-        titulo="Atención personalizada"
-        descripcion="Te ofrecemos un trato directo contigo, explicaciones claras y sencillas, asesoría adaptada a tu caso específico y seguimiento continuo durante todo el servicio."
-        ><img
-          class="w-1/4 my-4"
-          src="/IMGS/Icons/SAD.svg"
-          alt="icono de Servicio a domicilio"
-        /></GeneralContainer
-      >
+        <GeneralContainer
+          titulo="Garantía"
+          descripcion="Ofrecemos garantía en nuestros servicios para que tengas tranquilidad después de la reparación."
+        >
+          <img
+            class="w-1/4 my-4"
+            src="/IMGS/Icons/Wallet.webp"
+            alt="Icono de Garantía"
+          />
+        </GeneralContainer>
+
+        <GeneralContainer
+          titulo="Atención personalizada"
+          descripcion="Te ofrecemos un trato directo contigo, explicaciones claras y sencillas, asesoría adaptada a tu caso específico y seguimiento continuo durante todo el servicio."
+        >
+          <img
+            class="w-1/4 my-4"
+            src="/IMGS/Icons/SAD.webp"
+            alt="icono de Servicio a domicilio"
+          />
+        </GeneralContainer>
+      </div>
     </div>
   </section>
 
-  <section class="my-12 mx-4" data-aos="fade-left">
-    <h3 class="uppercase font-bold text-center my-4 text-lg">
-      ¿Como trabajamos?
-    </h3>
+  <section class="py-12 bg-ContainerBG" data-aos="fade-left">
+    <div class="w-[80%] m-auto">
+      <div
+        class="text-center max-w-2xl mx-auto mb-14"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-once="true"
+      >
+        <span class="text-Blue font-semibold tracking-wider uppercase text-xs sm:text-sm">
+          Proceso paso a paso
+        </span>
+        <h2 class="uppercase font-extrabold text-3xl sm:text-4xl tracking-tight">
+          ¿Cómo <span class="text-Blue">trabajamos</span>?
+        </h2>
+      </div>
 
-    <div class="grid grid-cols-3 gap-6">
-      <GeneralContainer
-        titulo="Diagnóstico Asequible"
-        descripcion="Detectamos el problema de tu equipo de forma rápida y precisa. Nuestro diagnóstico tiene un costo accesible y se descuenta si decides realizar la reparación con nosotros."
-      />
+      <div class="grid grid-cols-3 gap-6">
+        <GeneralContainer
+          titulo="01 · Diagnóstico Asequible"
+          descripcion="Detectamos el problema de tu equipo de forma rápida y precisa. Nuestro diagnóstico tiene un costo accesible y se descuenta si decides realizar la reparación con nosotros."
+        />
 
-      <GeneralContainer
-        titulo="Cotización clara"
-        descripcion="Te explicamos exactamente qué tiene tu equipo, qué se necesita hacer y cuánto cuesta, sin cargos ocultos ni sorpresas."
-      />
+        <GeneralContainer
+          titulo="02 · Cotización clara"
+          descripcion="Te explicamos exactamente qué tiene tu equipo, qué se necesita hacer y cuánto cuesta, sin cargos ocultos ni sorpresas."
+        />
 
-      <GeneralContainer
-        titulo="Reparación profesional"
-        descripcion="Trabajamos con herramientas adecuadas y procesos seguros para garantizar una reparación confiable y duradera."
-      />
+        <GeneralContainer
+          titulo="03 · Reparación profesional"
+          descripcion="Trabajamos con herramientas adecuadas y procesos seguros para garantizar una reparación confiable y duradera."
+        />
 
-      <GeneralContainer
-        titulo="Entrega rápida"
-        descripcion="Sabemos que tu equipo es importante, por eso priorizamos tiempos de entrega rápidos sin comprometer la calidad."
-      />
+        <GeneralContainer
+          titulo="04 · Entrega rápida"
+          descripcion="Sabemos que tu equipo es importante, por eso priorizamos tiempos de entrega rápidos sin comprometer la calidad."
+        />
 
-      <GeneralContainer
-        titulo="Seguridad del equipo"
-        descripcion="Cuidamos tu equipo en todo momento trabajando con procedimientos seguros para evitar daños y garantizar un manejo responsable de cada componente."
-      />
+        <GeneralContainer
+          titulo="05 · Seguridad del equipo"
+          descripcion="Cuidamos tu equipo en todo momento trabajando con procedimientos seguros para evitar daños y garantizar un manejo responsable de cada componente."
+        />
 
-      <GeneralContainer
-        titulo="Transparencia total"
-        descripcion="Te mantenemos informado en cada etapa del proceso, sin realizar ningún trabajo sin tu aprobación y siempre conocerás el costo antes de empezar."
-      />
+        <GeneralContainer
+          titulo="06 · Transparencia total"
+          descripcion="Te mantenemos informado en cada etapa del proceso, sin realizar ningún trabajo sin tu aprobación y siempre conocerás el costo antes de empezar."
+        />
+      </div>
     </div>
   </section>
 
-  <section class="mx-4 my-12" data-aos="fade-up">
-    <h5 class="uppercase font-bold text-center my-4 text-lg">
-      Opinion de nuestros clientes
-    </h5>
-
-    <div class="grid grid-cols-3 gap-6">
-      <Opinion
-        nombre="María Eugenia"
-        opinion="Excelente servicio, dejaron mi laptop como nueva. Muy profesionales y rápidos, totalmente recomendados."
-        src="/IMGS/Opinion/Maria.jpg"
+  <section class="py-12 bg-ContainerBG1" data-aos="fade-up">
+    <div class="w-[80%] m-auto">
+      <div
+        class="text-center max-w-2xl mx-auto mb-14"
+        data-aos="fade-up"
+        data-aos-duration="700"
+        data-aos-once="true"
       >
-        <div class="flex gap-1 text-yellow-500">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </Opinion>
+        <span class="text-Blue font-semibold tracking-wider uppercase text-xs sm:text-sm">
+          Opiniones reales
+        </span>
+        <h2 class="uppercase font-extrabold text-3xl sm:text-4xl tracking-tight">
+          ¿Que opinan <span class="text-Blue">nuestros clientes</span>?
+        </h2>
+      </div>
 
-      <Opinion
-        nombre="Carlos Rodríguez"
-        opinion="Pensé que mi computadora ya no tenía solución, pero lograron repararla sin problemas. Muy buena atención."
-        src="/IMGS/Opinion/Carlos.jpg"
-      >
-        <div class="flex gap-1 text-yellow-500">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </Opinion>
+      <div class="grid grid-cols-3 gap-6">
+        <Opinion
+          nombre="María Eugenia"
+          opinion="Excelente servicio, dejaron mi laptop como nueva. Muy profesionales y rápidos, totalmente recomendados."
+          src="/IMGS/Opinion/Maria.webp"
+        >
+          <div class="flex gap-1 text-yellow-500">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </Opinion>
 
-      <Opinion
-        nombre="Andrés Mora"
-        opinion="Buen precio, atención clara y resultados rápidos. Volvería a usar el servicio sin duda."
-        src="/IMGS/Opinion/Andres.jpg"
-      >
-        <div class="flex gap-1 text-yellow-500">
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-        </div>
-      </Opinion>
+        <Opinion
+          nombre="Carlos Rodríguez"
+          opinion="Pensé que mi computadora ya no tenía solución, pero lograron repararla sin problemas. Muy buena atención."
+          src="/IMGS/Opinion/Carlos.webp"
+        >
+          <div class="flex gap-1 text-yellow-500">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </Opinion>
+
+        <Opinion
+          nombre="Andrés Mora"
+          opinion="Buen precio, atención clara y resultados rápidos. Volvería a usar el servicio sin duda."
+          src="/IMGS/Opinion/Andres.webp"
+        >
+          <div class="flex gap-1 text-yellow-500">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+        </Opinion>
+      </div>
     </div>
   </section>
 </Layout>

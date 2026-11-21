@@ -9,7 +9,7 @@ import AOSInit from "../components/AOSInit";
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width" />
-    <link rel="icon" href="/IMGS/Logos/Logo-AurexLab.png" />
+    <link rel="icon" href="/IMGS/Logos/Logo-AurexLab.webp" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -18,11 +18,12 @@ import AOSInit from "../components/AOSInit";
     />
     <script
       src="https://kit.fontawesome.com/caac178fdb.js"
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <meta name="generator" content={Astro.generator} />
     <title>AurexLab</title>
   </head>
-  <body class="text-sm lg:text-base font-Poppins">
+  <body class="text-sm lg:text-base font-Poppins text-White bg-ContainerBG1 overflow-x-hidden">
     <Nav />
     <slot />
     <AOSInit client:only="react" />

@@ -96,66 +96,68 @@ const feedVideos = [
 ---
 
 <Layout>
-  <section class="grid grid-cols-2 mt-24 items-center justify-center mx-4">
-    <div class="flex flex-col gap-2 mx-4">
-      <h1 class="text-Blue uppercase font-bold text-3xl">
-        Articulos y noticias
-      </h1>
-      <p class="uppercase text-7xl">Videos</p>
-      <p>
-        Mira nuestros tutorialeres en video sobre mantenimiento, reparación y
-        consejos para tus equipos, en Youtube y Tik Tok.
-      </p>
-    </div>
+  <section class="mt-24">
+    <div class="grid grid-cols-2 w-[80%] pt-12 m-auto">
+      <div class="flex flex-col gap-2 mx-4">
+        <h1 class="text-Blue uppercase font-bold text-3xl">
+          Articulos y noticias
+        </h1>
+        <p class="uppercase text-7xl">Videos</p>
+        <p>
+          Mira nuestros tutorialeres en video sobre mantenimiento, reparación y
+          consejos para tus equipos, en Youtube y Tik Tok.
+        </p>
+      </div>
 
-    <div class="flex gap-4 items-center ml-auto">
-      <a
-        href="#"
-        class="flex flex-col bg-ContainerBG text-White p-4 rounded-lg hover:bg-Blue hover:duration-150"
-      >
-        <img src="/IMGS/Icons/YT.png" alt="Youtube" class="w-48" />
-        <div class="flex items-center gap-2">
-          <p>Suscribete a nuestro canal de YouTube</p>
-          <i class="fa-solid fa-circle-arrow-right"></i>
-        </div>
-      </a>
+      <div class="flex gap-4 items-center ml-auto">
+        <a
+          href="#"
+          class="flex flex-col bg-ContainerBG text-White p-4 rounded-lg hover:bg-Blue hover:duration-200"
+        >
+          <img src="/IMGS/Icons/YT.webp" alt="Youtube" class="w-48" />
+          <div class="flex items-center gap-2">
+            <p>Suscribete a nuestro canal de YouTube</p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </a>
 
-      <a
-        href="#"
-        class="flex flex-col bg-ContainerBG text-White p-4 rounded-lg hover:bg-Blue hover:duration-150"
-      >
-        <img src="/IMGS/Icons/Tiktok.png" alt="TikTok" class="w-48" />
-        <div class="flex items-center gap-2">
-          <p>Siguenos en TikTok</p>
-          <i class="fa-solid fa-circle-arrow-right"></i>
-        </div>
-      </a>
+        <a
+          href="#"
+          class="flex flex-col bg-ContainerBG text-White p-4 rounded-lg hover:bg-Blue hover:duration-200"
+        >
+          <img src="/IMGS/Icons/Tiktok.webp" alt="TikTok" class="w-48" />
+          <div class="flex items-center gap-2">
+            <p>Siguenos en TikTok</p>
+            <i class="fa-solid fa-circle-arrow-right"></i>
+          </div>
+        </a>
+      </div>
     </div>
   </section>
 
   <section class="my-12 mx-4">
-    <ul class="flex gap-6">
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Todos
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        YouTube
-      </li>
-      <li
-        class="p-4 bg-Black/80 backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-LightBlue"
-      >
-        Tik Tok
-      </li>
-    </ul>
+    <div class="w-[80%] m-auto">
+      <p class="mb-2 uppercase text-gray-400 tracking-wider">
+        Filtrar por categoría
+      </p>
+      <ul class="flex gap-6">
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Todos
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          YouTube
+        </li>
+        <li class="p-4 bg-LightBlue backdrop-blur-lg text-White rounded-lg cursor-pointer hover:bg-White hover:scale-90 hover:text-Blue hover:duration-200">
+          Tik Tok
+        </li>
+      </ul>
 
-    <section class="grid grid-cols-4 gap-6 mt-12">
-      {
-        feedVideos.map((video) => (
-          <article class="bg-ContainerBG text-White p-2 rounded-lg" data-aos="fade-right">
+      <section class="grid grid-cols-4 gap-6 mt-12">
+        {feedVideos.map((video) => (
+          <article
+            class="bg-ContainerBG text-White p-2 rounded-lg"
+            data-aos="fade-right"
+          >
             <img src={video.portada} alt={video.titulo} class="" />
             <div class="p-4">
               <h3 class="text-xl font-bold text-Blue">{video.titulo}</h3>
@@ -163,8 +165,8 @@ const feedVideos = [
               <p class="text-LightBlue">{video.plataforma}</p>
             </div>
           </article>
-        ))
-      }
-    </section>
+        ))}
+      </section>
+    </div>
   </section>
 </Layout>

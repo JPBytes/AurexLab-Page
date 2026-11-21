@@ -9,52 +9,64 @@ import Botton from "./Botton.astro";
     let scroll = window.scrollY;
 
     if (scroll > 90) {
-      Nav?.classList.add("bg-White", "duration-150", "transform-all");
+      Nav?.classList.add("bg-White", "duration-200", "transform-all");
     } else {
-      Nav?.classList.remove("bg-White", "duration-150", "transform-all");
+      Nav?.classList.remove("bg-White", "duration-200", "transform-all");
     }
   });
 </script>
 
-<nav
-  class="grid grid-cols-3 px-4 items-center fixed top-0 w-dvw z-20 left-0"
->
-  <a href="/" class="flex items-center gap-4">
-    <img src="./IMGS/Logos/Letra.png" alt="Logo AurexLab" class="w-1/6" />
-    <img src="./IMGS/Logos/Texto.png" alt="Logo AurexLab" class="w-1/4" />
-  </a>
+<nav class="fixed top-0 z-20 left-0 bg-White w-dvw text-Black">
+  <div class="w-[80%] grid grid-cols-3 items-center m-auto my-4">
+    <a href="/" class="flex items-center gap-4">
+      <img src="./IMGS/Logos/Letra.webp" alt="Logo AurexLab" class="w-1/8" />
+      <img src="./IMGS/Logos/Texto.webp" alt="Logo AurexLab" class="w-1/4" />
+    </a>
 
-  <ul class="flex justify-center gap-6">
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="/">Inicio</a
-    >
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="#Servicios">Servicios</a
-    >
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="#Nosotros">Nosotros</a
-    >
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="/blog">Blog</a
-    >
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="/videos">Videos</a
-    >
-    <a
-      class="hover:bg-Blue hover:text-White hover:duration-150 hover:scale-90 p-2 rounded-lg"
-      href="#Contacto">Contacto</a
-    >
-  </ul>
+    <ul class="flex justify-center gap-6">
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="/"
+      >
+        Inicio
+      </a>
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="#Servicios"
+      >
+        Servicios
+      </a>
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="#Nosotros"
+      >
+        Nosotros
+      </a>
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="/blog"
+      >
+        Blog
+      </a>
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="/videos"
+      >
+        Videos
+      </a>
+      <a
+        class="hover:bg-Blue hover:text-White hover:duration-200 hover:scale-90 p-2 rounded-lg transition-all"
+        href="#Contacto"
+      >
+        Contacto
+      </a>
+    </ul>
 
-  <Botton
-    icon="fa-whatsapp"
-    texto="WhatsApp"
-    tipo="fa-brands"
-    claseExtra="ml-auto"
-  />
+    <Botton
+      icon="fa-whatsapp"
+      texto="WhatsApp"
+      tipo="fa-brands"
+      claseExtra="ml-auto"
+    />
+  </div>
 </nav>

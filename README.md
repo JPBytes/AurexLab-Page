@@ -13,10 +13,10 @@ Inside of your Astro project, you'll see the following folders and files:
 ```text
 /
 ├── public/
-│   └── favicon.svg
+│   └── favicon.webp
 ├── src
 │   ├── assets
-│   │   └── astro.svg
+│   │   └── astro.webp
 │   ├── components
 │   │   └── Welcome.astro
 │   ├── layouts

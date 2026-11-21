@@ -18,12 +18,12 @@ export default function Main() {
         <nav className="w-[15dvw] bg-ContainerBG flex flex-col h-dvh">
           <div className="flex items-center justify-center">
             <img
-              src="/IMGS/Logos/Letra.png"
+              src="/IMGS/Logos/Letra.webp"
               alt="Letra AurexLab"
               className="invert w-24"
             />
             <img
-              src="/IMGS/Logos/Texto.png"
+              src="/IMGS/Logos/Texto.webp"
               alt="Texto AurexLab"
               className="invert w-24"
             />
@@ -47,7 +47,7 @@ export default function Main() {
               <hr className="w-full h-1 bg-White border-none" />
               <div className="flex gap-2 items-center  justify-center text-White my-2">
                 <img
-                  src="/IMGS/Opinion/Andres.jpg"
+                  src="/IMGS/Opinion/Andres.webp"
                   alt="Imagen de Andres"
                   className="rounded-full w-12 h-12 object-center object-cover"
                 />

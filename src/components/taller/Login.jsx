@@ -11,7 +11,7 @@ export default function Login() {
       <section
         style={{
           "background-image":
-            "linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.jpg);",
+            "linear-gradient(rgba(0,0,0, 0.6), rgba(0,0,0, 0.6)),  url(/IMGS/Fondo.webp);",
         }}
         className="bg-center bg-cover bg-no-repeat h-dvh"
       >
