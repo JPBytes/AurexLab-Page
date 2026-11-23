@@ -1,97 +1,85 @@
-# JPByte — Portafolio de Diseño UI/UX y Desarrollo Web
+# AurexLab — Sitio Web de Diagnóstico, Mantenimiento y Reparación de Equipos
 
-Portafolio personal de **Juan Pablo García (JPByte)**, diseñador web y desarrollador frontend enfocado en crear interfaces modernas, responsivas y funcionales que unen el diseño visual con un código limpio y mantenible.
+Sitio web para **AurexLab**, enfocado en el diagnóstico, cuidado y reparación de equipos con tarifas transparentes, un flujo de trabajo claro paso a paso y secciones complementarias de contenido.
 
-[![Demo en vivo](https://img.shields.io/badge/Demo-jpbyte.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://jpbyte.vercel.app/en/)
-[![Astro](https://img.shields.io/badge/Astro-BC52EE?style=for-the-badge&logo=astro&logoColor=white)](https://astro.build/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
-[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/)
+> **Estado del desarrollo:** 🚧 **Diseño responsive en progreso.** Actualmente la maquetación está enfocada en escritorio y se encuentra en proceso de adaptación completa para tablets y dispositivos móviles.
+
+[![Demo en vivo](https://img.shields.io/badge/Demo-aurexlab.vercel.app-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://aurexlab.vercel.app/)
+[![Estado](https://img.shields.io/badge/Responsive-En%20progreso-f59e0b?style=for-the-badge)](#estado-del-proyecto-y-hoja-de-ruta)
 
 ---
 
 ## Tabla de contenidos
 
-- [Vista previa y enlaces](#vista-previa-y-enlaces)
-- [Características principales](#características-principales)
-- [Secciones del portafolio](#secciones-del-portafolio)
-- [Proyectos destacados](#proyectos-destacados)
-- [Stack tecnológico y herramientas](#stack-tecnológico-y-herramientas)
-- [Estructura del proyecto](#estructura-del-proyecto)
+- [Vista previa](#vista-previa)
+- [Secciones y funcionalidades](#secciones-y-funcionalidades)
+- [Planes y servicios](#planes-y-servicios)
+- [Cómo trabajamos](#cómo-trabajamos)
+- [Estado del proyecto y hoja de ruta](#estado-del-proyecto-y-hoja-de-ruta)
 - [Instalación y ejecución local](#instalación-y-ejecución-local)
-- [Autor y contacto](#autor-y-contacto)
 
 ---
 
-## Vista previa y enlaces
+## Vista previa
 
-- **Sitio en vivo (EN):** [https://jpbyte.vercel.app/en/](https://jpbyte.vercel.app/en/)
-- **Sitio en vivo (ES):** [https://jpbyte.vercel.app/es/](https://jpbyte.vercel.app/es/)
+- **Sitio en vivo:** [https://aurexlab.vercel.app/](https://aurexlab.vercel.app/)
 
-![Vista previa del portafolio JPByte](./public/preview.png)
-
----
-
-## Características principales
-
-- **Enfoque híbrido Diseño + Código:** Transición fluida desde la conceptualización y UI/UX en Figma hasta componentes web interactivos y responsivos.
-- **Soporte multi-idioma:** Navegación localizada (`ES` / `EN`) y descarga directa de currículum en español e inglés.
-- **Arquitectura modular y rápida:** Construido con **Astro** y **Tailwind CSS** para lograr tiempos de carga ágiles y una base de código escalable.
-- **Diseño adaptable (*Responsive*):** Experiencia cuidada en pantallas de escritorio, tablets y dispositivos móviles.
+![Vista previa de AurexLab](./public/preview.png)
 
 ---
 
-## Secciones del portafolio
+## Secciones y funcionalidades
 
-1. **Inicio / Presentación:** Estado de disponibilidad, propuesta de valor, accesos rápidos a proyectos y contacto, y descarga de CV.
-2. **Proyectos seleccionados:** Vitrina de trabajos web y conceptos UI/UX con enlaces a código y vista previa.
-3. **Servicios:** Desglose de soluciones de **Diseño Gráfico** (piezas promocionales, eventos, campañas) y **Desarrollo Web** (landing pages, sitios informativos, diseño adaptable y UX).
-4. **Experiencia:** Trayectoria en desarrollo web institucional, proyectos freelance y aplicaciones web para gestión de talleres/equipos.
-5. **Herramientas y tecnologías:** Stack organizado por áreas de diseño gráfico y desarrollo web.
-6. **Contacto:** Llamado a la acción para colaboraciones, proyectos freelance y oportunidades laborales.
-
----
-
-## Proyectos destacados
-
-| Proyecto | Categoría | Stack principal | Enlaces |
-| :--- | :--- | :--- | :--- |
-| **Con-siente CoWorking** | Landing Page · UI/UX | Astro, Tailwind CSS | [Demo](https://consiente-coworking.vercel.app/) · [Repo](https://github.com/JPBytes/Con-siente-Coworking) |
-| **CTP Santo Domingo** | Sitio Institucional | React, Tailwind CSS | [Demo](https://ctp-santodomingo.vercel.app/) · [Repo](https://github.com/JPBytes/ctp-santodomingo) |
-| **Dela Flowers** | E-commerce · UI/UX | Astro, React, Tailwind CSS | [Demo](https://dela-flowers.vercel.app/) · [Repo](https://github.com/JPBytes/Dela-Flowers-New) |
-| **Spooky Fest** | Descubrimiento de Eventos · UI/UX | Astro, Tailwind CSS / SASS | [Demo](https://spookyfest.vercel.app/) · [Repo](https://github.com/JPBytes/Halloween-Festival) |
+- **Navegación principal:** Accesos a *Inicio*, *Servicios*, *Nosotros*, *Blog*, *Videos* y *Contacto*.
+- **Encabezado principal:** Presentación de AurexLab y pilares clave (*Técnicos especializados*, *Herramientas profesionales*, *Diagnóstico preciso* y *Garantía en todos nuestros servicios*).
+- **Planes y tarifas:** Tarjetas de servicios con precios visibles y llamados directos a contacto.
+- **¿Por qué elegir a Aurex Lab?:** Enfoque en *Profesionalismo*, *Garantía* y *Atención personalizada*.
+- **¿Cómo trabajamos?:** Proceso estructurado de 6 etapas desde el diagnóstico hasta la transparencia total.
+- **Opiniones de clientes:** Testimonios de usuarios sobre la atención, tiempos de respuesta y resultados.
 
 ---
 
-## Stack tecnológico y herramientas
+## Planes y servicios
 
-### Desarrollo Web
-- **Astro**
-- **React**
-- **JavaScript**
-- **Tailwind CSS**
-- **HTML5 / CSS3 / SASS**
-- **Git & GitHub**
-
-### Diseño Gráfico y UI/UX
-- **Figma**
+| Plan | Precio de referencia | Incluye |
+| :--- | :--- | :--- |
+| **Diagnóstico Profesional** | ₡5 000 | Revisión de hardware y software, detección de fallas y recomendación de solución |
+| **Solución Rápida** *(Más solicitado)* | ₡15 000 | Limpieza básica, optimización del sistema y eliminación de virus |
+| **Solución Avanzada** | ₡23 000 | Limpieza profunda, cambio de pasta térmica y formateo del sistema |
 
 ---
 
-## Estructura del proyecto
+## Cómo trabajamos
 
-```text
-.
-├── public/
-│   ├── CV/
-│   ├── ICONS/
-│   └── IMGS/
-├── src/
-│   ├── components/
-│   ├── layouts/
-│   ├── pages/
-│   │   ├── en/
-│   │   └── es/
-│   └── styles/
-├── astro.config.mjs
-├── package.json
-└── tsconfig.json
+1. **01 · Diagnóstico Asequible:** Detección rápida y precisa de la falla (con descuento al realizar la reparación con AurexLab).
+2. **02 · Cotización clara:** Explicación del estado del equipo, acciones necesarias y costo sin cargos ocultos.
+3. **03 · Reparación profesional:** Intervención con herramientas adecuadas y procesos seguros.
+4. **04 · Entrega rápida:** Priorización de tiempos de entrega ágiles sin sacrificar calidad.
+5. **05 · Seguridad del equipo:** Manejo cuidadoso y responsable de cada componente.
+6. **06 · Transparencia total:** Seguimiento y aprobación previa antes de ejecutar cualquier trabajo.
+
+---
+
+## Estado del proyecto y hoja de ruta
+
+- [x] Estructura base del sitio y secciones principales (*Inicio*, *Servicios*, *Nosotros*, *Blog*, *Videos*, *Contacto*)
+- [x] Presentación de planes, flujo de trabajo en 6 pasos y testimonios
+- [ ] **Adaptación *responsive* completa** (menú, grillas de tarjetas, espaciados y tipografías en pantallas pequeñas y medianas)
+- [ ] Revisión y pulido de detalles finales en vistas secundarias (*Blog* y *Videos*)
+
+---
+
+## Instalación y ejecución local
+
+```bash
+# 1. Clonar el repositorio
+git clone [https://github.com/usuario/aurexlab.git](https://github.com/usuario/aurexlab.git)
+
+# 2. Entrar a la carpeta del proyecto
+cd aurexlab
+
+# 3. Instalar dependencias
+npm install
+
+# 4. Iniciar el servidor de desarrollo
+npm run dev
